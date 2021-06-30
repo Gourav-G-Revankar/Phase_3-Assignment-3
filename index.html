@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Student table Save & get data in localstorage, Sorting, Pagination</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Table</h1>
+        <form autocomplete="off" onsubmit="onformSubmit();">
+            <label>First Name</label>
+            <input type="text" id="fname" name="fname">
+            <span id="fname-error"></span>
+            <label>Last Name</label>
+            <input type="text" id="lname" name="lname">
+            <span id="lname-error"></span>
+            <label>Degree</label>
+            <input type="text" id="degree" name="degree">
+            <span id="degree-error"></span>
+            <label>Sub-Degree</label>
+            <input type="text" id="sdegree" name="sdegree">
+            <span id="sdegree-error"></span>
+            <label>Date of birth</label>
+            <input type="text" id="dob" name="dob">
+            <span id="dob-error"></span>
+            <label>Email ID</label>
+            <input type="text" id="emailid" name="emailid">
+            <span id="emailid-error"></span>
+            <label>Mobile Number</label>
+            <input type="text" id="pnumber" name="pnumber">
+            <span id="pnumber-error"></span>
+            <button class="btn-submit btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+    <div class="container table-block table-responsive">
+        <!-- Table structure here -->
+        <table class="table table-bordered" id="our-table">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Degree</th>
+                    <th>Sub-Degree</th>
+                    <th>Date of birth</th>
+                    <th>Email ID</th>
+                    <th>Mobile Number</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container table-block">
+        <p><button class="btn btn-primary" onclick="sortTable()">Table Sort</button></p>
+        <div id="pagination-wrapper"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
